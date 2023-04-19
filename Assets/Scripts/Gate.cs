@@ -15,4 +15,21 @@ public class Gate : MonoBehaviour
     {
         gateApperaence.UpdateVisual(deformationType, value);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        PlayerModifier playerModifier = other.attachedRigidbody.GetComponent<PlayerModifier>();
+        if (playerModifier)
+        {
+            if (deformationType == DeformationType.Width)
+            {
+                playerModifier.AddWidth(value);
+            }
+            else if (deformationType == DeformationType.Height)
+            {
+                playerModifier.AddHeight(value);
+            }
+            
+        }
+    }
 }
