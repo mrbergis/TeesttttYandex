@@ -49,6 +49,7 @@
      <Compile Include="Assets/Scripts/CoinManager.cs" />
      <Compile Include="Assets/Scripts/GameManager.cs" />
      <Compile Include="Assets/Scripts/GateApperaence.cs" />
+     <Compile Include="Assets/Scripts/Gate.cs" />
      <Folder Include="Assets" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
