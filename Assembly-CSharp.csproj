@@ -43,18 +43,18 @@
   <ItemGroup>
      <Compile Include="Assets/Scripts/CoinManager.cs" />
      <Compile Include="Assets/Scripts/GateApperaence.cs" />
+     <Compile Include="Assets/Scripts/PlayerBehaviour.cs" />
      <Compile Include="Assets/Scripts/CameraMove.cs" />
      <Compile Include="Assets/Scripts/GameManager.cs" />
      <Compile Include="Assets/Scripts/BoxMove.cs" />
-     <Compile Include="Assets/Scripts/CoinLogic.cs" />
-     <Compile Include="Assets/Scripts/Gate.cs" />
-     <Compile Include="Assets/Scripts/PlayerMove.cs" />
-     <Compile Include="Assets/Scripts/PlayerModifier.cs" />
-     <Compile Include="Assets/Scripts/PlayerBehaviour.cs" />
-     <Compile Include="Assets/Scripts/Barrier.cs" />
      <Compile Include="Assets/Scripts/PreFinishTrigger.cs" />
-     <Compile Include="Assets/Scripts/PreFinishBehaviour.cs" />
+     <Compile Include="Assets/Scripts/CoinLogic.cs" />
+     <Compile Include="Assets/Scripts/Barrier.cs" />
+     <Compile Include="Assets/Scripts/Gate.cs" />
      <Compile Include="Assets/Scripts/FinishTrigger.cs" />
+     <Compile Include="Assets/Scripts/PlayerMove.cs" />
+     <Compile Include="Assets/Scripts/PreFinishBehaviour.cs" />
+     <Compile Include="Assets/Scripts/PlayerModifier.cs" />
      <Folder Include="Assets" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />

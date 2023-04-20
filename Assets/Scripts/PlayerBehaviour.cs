@@ -8,20 +8,17 @@ public class PlayerBehaviour : MonoBehaviour
     private PreFinishBehaviour _preFinishBehaviour;
     private Animator _animator;
     
-    private void Awake()
+    void Start()
     {
         _playerMove = GetComponent<PlayerMove>();
         _preFinishBehaviour = GetComponent<PreFinishBehaviour>();
         _animator = GetComponentInChildren<Animator>();
-    }
-    
-    void Start()
-    {
+        
         if (_playerMove)
         {
             _playerMove.enabled = false;
 
-            GameManager.GoToPlay += () => Play();
+            GameManager.GoToPlay += Play;
         }
 
         if (_preFinishBehaviour)
@@ -57,6 +54,12 @@ public class PlayerBehaviour : MonoBehaviour
         {
             _animator.SetTrigger("Dance");
         }
+    }
 
+    private void OnDestroy()
+    {
+        GameManager.GoToPlay -= Play;
+        PreFinishTrigger.EventPreFinishTrigger -= StartPreFinishBehaviour;
+        FinishTrigger.EventFinishTrigger -= StartFinishBehaviour;
     }
 }

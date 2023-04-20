@@ -67,7 +67,7 @@ public class PlayerModifier : MonoBehaviour
         else
         {
             Die();
-        } 
+        }
     }
 
     void UpdateWidth()
@@ -80,6 +80,12 @@ public class PlayerModifier : MonoBehaviour
 
     void Die()
     {
+        GameManager.Instance.ShowFinishWindow();
         Destroy(gameObject);
+    }
+
+    private void OnDestroy()
+    {
+        Barrier.EventBarrier -= InBarrier;
     }
 }

@@ -9,5 +9,6 @@ public class FinishTrigger : MonoBehaviour
     {
         EventFinishTrigger?.Invoke();
         Destroy(gameObject);
+        GameManager.Instance.ShowFinishWindow();
     }
 }
