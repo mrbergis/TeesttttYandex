@@ -55,6 +55,8 @@
      <Compile Include="Assets/Scripts/PlayerMove.cs" />
      <Compile Include="Assets/Scripts/PreFinishBehaviour.cs" />
      <Compile Include="Assets/Scripts/PlayerModifier.cs" />
+     <Compile Include="Assets/Scripts/Progress.cs" />
+     <Compile Include="Assets/Scripts/Shop.cs" />
      <Folder Include="Assets" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />

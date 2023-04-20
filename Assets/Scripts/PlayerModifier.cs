@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PlayerModifier : MonoBehaviour
 {
+    private Progress _progress;
+    
     const float MinOffsetSpine = 0.17f;
     private const float PlayerSize = 1.84f;
     
@@ -21,12 +23,17 @@ public class PlayerModifier : MonoBehaviour
     
     private void Start()
     {
+        _progress = Progress.Instance;
+        
         _renderer = GetComponentInChildren<Renderer>();
         
         Barrier.EventBarrier += InBarrier;
+
+        SetWidth(_progress.width);
+        SetHeight(_progress.height);
     }
 
-    void Update()
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.W))
         {
@@ -37,23 +44,7 @@ public class PlayerModifier : MonoBehaviour
             AddHeight(20);
         }
     }
-
-    public void AddWidth(int value)
-    {
-        width += value;
-        UpdateWidth();
-    }
-
-    public void AddHeight(int value)
-    {
-        height += value;
-        
-        float offSetY = height * _heightMultiplier + MinOffsetSpine;
-        topSpine.position = bottomSpine.position + new Vector3(0, offSetY, 0);
-        
-        colliderTransform.localScale = new Vector3(1, PlayerSize + height * _heightMultiplier, 1);
-    }
-
+    
     private void InBarrier()
     {
         if (height > 0)
@@ -70,7 +61,7 @@ public class PlayerModifier : MonoBehaviour
         }
     }
 
-    void UpdateWidth()
+    private void UpdateWidth()
     {
         if(_renderer == null)
             return;
@@ -78,7 +69,15 @@ public class PlayerModifier : MonoBehaviour
         _renderer.material.SetFloat("_PushValue", width * _widthMultiplier);
     }
 
-    void Die()
+    private void UpdateHeight()
+    {
+        float offSetY = height * _heightMultiplier + MinOffsetSpine;
+        topSpine.position = bottomSpine.position + new Vector3(0, offSetY, 0);
+        
+        colliderTransform.localScale = new Vector3(1, PlayerSize + height * _heightMultiplier, 1);
+    }
+    
+    private void Die()
     {
         GameManager.Instance.ShowFinishWindow();
         Destroy(gameObject);
@@ -88,4 +87,31 @@ public class PlayerModifier : MonoBehaviour
     {
         Barrier.EventBarrier -= InBarrier;
     }
+    
+    public void AddWidth(int value)
+    {
+        width += value;
+        UpdateWidth();
+    }
+
+    public void AddHeight(int value)
+    {
+        height += value;
+        UpdateHeight();
+    }
+
+    public void SetWidth(int value)
+    {
+        width = value;
+        _progress.width = value;
+        UpdateWidth();
+    }
+    
+    public void SetHeight(int value)
+    {
+        height = value;
+        _progress.height = value;
+        UpdateHeight();
+    }
+    
 }

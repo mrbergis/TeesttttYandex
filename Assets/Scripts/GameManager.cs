@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance = null;
     public static event Action GoToPlay;
+    public static event Action GoToExit;
     
     [SerializeField] private GameObject startMenu;
     [SerializeField] private TMP_Text levelText;
@@ -38,6 +39,7 @@ public class GameManager : MonoBehaviour
 
     public void ShowFinishWindow()
     {
+        GoToExit?.Invoke();
         finishWindow.SetActive(true);
     }
     
