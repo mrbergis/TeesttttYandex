@@ -22,6 +22,8 @@ public class PlayerModifier : MonoBehaviour
     private void Start()
     {
         _renderer = GetComponentInChildren<Renderer>();
+        
+        Barrier.EventBarrier += InBarrier;
     }
 
     void Update()
@@ -38,13 +40,8 @@ public class PlayerModifier : MonoBehaviour
 
     public void AddWidth(int value)
     {
-        if(_renderer == null)
-            return;
-        
         width += value;
-
-        _renderer.material.SetFloat("_PushValue", width * _widthMultiplier);
-        
+        UpdateWidth();
     }
 
     public void AddHeight(int value)
@@ -55,5 +52,34 @@ public class PlayerModifier : MonoBehaviour
         topSpine.position = bottomSpine.position + new Vector3(0, offSetY, 0);
         
         colliderTransform.localScale = new Vector3(1, PlayerSize + height * _heightMultiplier, 1);
+    }
+
+    private void InBarrier()
+    {
+        if (height > 0)
+        {
+            AddHeight(-50);
+        }
+        else if (width > 0)
+        {
+            AddWidth(-50);
+        }
+        else
+        {
+            Die();
+        } 
+    }
+
+    void UpdateWidth()
+    {
+        if(_renderer == null)
+            return;
+        
+        _renderer.material.SetFloat("_PushValue", width * _widthMultiplier);
+    }
+
+    void Die()
+    {
+        Destroy(gameObject);
     }
 }

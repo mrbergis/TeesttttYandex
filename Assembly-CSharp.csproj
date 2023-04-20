@@ -47,10 +47,14 @@
      <Compile Include="Assets/Scripts/GameManager.cs" />
      <Compile Include="Assets/Scripts/BoxMove.cs" />
      <Compile Include="Assets/Scripts/CoinLogic.cs" />
-     <Compile Include="Assets/Scripts/Test.cs" />
      <Compile Include="Assets/Scripts/Gate.cs" />
      <Compile Include="Assets/Scripts/PlayerMove.cs" />
      <Compile Include="Assets/Scripts/PlayerModifier.cs" />
+     <Compile Include="Assets/Scripts/PlayerBehaviour.cs" />
+     <Compile Include="Assets/Scripts/Barrier.cs" />
+     <Compile Include="Assets/Scripts/PreFinishTrigger.cs" />
+     <Compile Include="Assets/Scripts/PreFinishBehaviour.cs" />
+     <Compile Include="Assets/Scripts/FinishTrigger.cs" />
      <Folder Include="Assets" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
@@ -65,8 +69,6 @@
      <Folder Include="Assets/TextMesh Pro/Resources" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
      <Folder Include="Assets/TextMesh Pro" />
-     <Folder Include="Assets/Files" />
-     <Folder Include="Assets/Files/Puzzle" />
      <Folder Include="Assets/Settings" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" />
      <None Include="Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" />
@@ -81,7 +83,6 @@
      <Folder Include="Assets/TextMesh Pro/Fonts" />
      <Folder Include="Assets/Materials" />
      <None Include="Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
-     <Folder Include="Assets/Files/Puzzle/Materials" />
      <Folder Include="Assets/Shaders" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" />
      <Folder Include="Assets/Prefabs" />
