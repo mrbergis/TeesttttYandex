@@ -6,6 +6,7 @@ using UnityEngine;
 public class CoinLogic : MonoBehaviour
 {
     [SerializeField] private float rotationSpeed = 180;
+    [SerializeField] private GameObject effectPrefab;
     
     void Update()
     {
@@ -18,5 +19,6 @@ public class CoinLogic : MonoBehaviour
 
         Debug.Log(other.name);
         Destroy(gameObject);
+        Instantiate(effectPrefab, transform.position, transform.rotation);
     }
 }

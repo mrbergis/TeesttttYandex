@@ -110,3 +110,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d62115176908f4183b19acfee4ed0847, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bricksEffectPrefab: {fileID: 1649007570396260871, guid: 8e22b428b1a7b437aa76f169a1c8d959, type: 3}
