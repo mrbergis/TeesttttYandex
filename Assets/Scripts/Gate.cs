@@ -13,7 +13,10 @@ public class Gate : MonoBehaviour
 
     private void OnValidate()
     {
-        gateApperaence.UpdateVisual(deformationType, value);
+        if (gateApperaence)
+        {
+            gateApperaence.UpdateVisual(deformationType, value);
+        }
     }
 
     private void OnTriggerEnter(Collider other)

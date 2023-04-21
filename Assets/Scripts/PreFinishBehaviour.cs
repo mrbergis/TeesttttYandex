@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PreFinishBehaviour : MonoBehaviour
 {
-    private float _speed = 3.0f;
+    //private float _speed = 3.0f;
     
     void Update()
     {
