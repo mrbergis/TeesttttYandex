@@ -20,6 +20,8 @@ public class PlayerModifier : MonoBehaviour
     [SerializeField] private Transform topSpine, bottomSpine;
     
     [SerializeField] private Transform colliderTransform;
+
+    [SerializeField] private AudioSource audioSource;
     
     private void Start()
     {
@@ -92,12 +94,21 @@ public class PlayerModifier : MonoBehaviour
     {
         width += value;
         UpdateWidth();
+
+        if (value > 0)
+        {
+            audioSource.Play();
+        }
     }
 
     public void AddHeight(int value)
     {
         height += value;
         UpdateHeight();
+        if (value > 0)
+        {
+            audioSource.Play();
+        }
     }
 
     public void SetWidth(int value)

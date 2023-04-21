@@ -42,31 +42,31 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets/Scripts/CoinManager.cs" />
+     <Compile Include="Assets/Scripts/Shop.cs" />
+     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_LightIntensityFade.cs" />
      <Compile Include="Assets/Scripts/GateApperaence.cs" />
+     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_AutoRotate.cs" />
      <Compile Include="Assets/Scripts/PlayerBehaviour.cs" />
      <Compile Include="Assets/Scripts/CameraMove.cs" />
+     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_AutoStopLoopedEffect.cs" />
      <Compile Include="Assets/Scripts/GameManager.cs" />
+     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_RandomDir.cs" />
      <Compile Include="Assets/Scripts/BoxMove.cs" />
      <Compile Include="Assets/Scripts/PreFinishTrigger.cs" />
+     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_AutoDestructShuriken.cs" />
      <Compile Include="Assets/Scripts/CoinLogic.cs" />
+     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_RotateCamera.cs" />
      <Compile Include="Assets/Scripts/Barrier.cs" />
+     <Compile Include="Assets/Scripts/Progress.cs" />
+     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_RandomDirectionTranslate.cs" />
      <Compile Include="Assets/Scripts/Gate.cs" />
      <Compile Include="Assets/Scripts/FinishTrigger.cs" />
+     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_Translate.cs" />
      <Compile Include="Assets/Scripts/PlayerMove.cs" />
      <Compile Include="Assets/Scripts/PreFinishBehaviour.cs" />
-     <Compile Include="Assets/Scripts/PlayerModifier.cs" />
-     <Compile Include="Assets/Scripts/Progress.cs" />
-     <Compile Include="Assets/Scripts/Shop.cs" />
-     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_AutoRotate.cs" />
      <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_New.cs" />
-     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_AutoStopLoopedEffect.cs" />
-     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_RotateCamera.cs" />
-     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_RandomDir.cs" />
-     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_LightIntensityFade.cs" />
-     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_Translate.cs" />
-     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_RandomDirectionTranslate.cs" />
      <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_LightFlicker.cs" />
-     <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_AutoDestructShuriken.cs" />
+     <Compile Include="Assets/Scripts/PlayerModifier.cs" />
      <Folder Include="Assets" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX3 Prefabs/Magic Dark" />
@@ -873,14 +873,8 @@
      <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
      <HintPath>/Volumes/Developer/Unity/Course/TeesttttYandex/Library/ScriptAssemblies/Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.RenderPipelines.Core.Runtime">
-     <HintPath>/Volumes/Developer/Unity/Course/TeesttttYandex/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
      <HintPath>/Volumes/Developer/Unity/Course/TeesttttYandex/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.Flow">
-     <HintPath>/Volumes/Developer/Unity/Course/TeesttttYandex/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.UI">
      <HintPath>/Volumes/Developer/Unity/Course/TeesttttYandex/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
@@ -894,8 +888,14 @@
      <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
      <HintPath>/Volumes/Developer/Unity/Course/TeesttttYandex/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.VisualScripting.Flow">
+     <HintPath>/Volumes/Developer/Unity/Course/TeesttttYandex/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
+     </Reference>
      <Reference Include="UnityEngine.UI">
      <HintPath>/Volumes/Developer/Unity/Course/TeesttttYandex/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Core.Runtime">
+     <HintPath>/Volumes/Developer/Unity/Course/TeesttttYandex/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Core">
      <HintPath>/Volumes/Developer/Unity/Course/TeesttttYandex/Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
@@ -949,14 +949,6 @@
       <Project>{92761f3a-f43c-1dcc-84c3-17a50fe82ae8}</Project>
       <Name>CFXREditor</Name>
     </ProjectReference>
-    <ProjectReference Include="CFXR.WelcomeScreen.csproj">
-      <Project>{758cd580-f564-b038-4310-712693b9dbe9}</Project>
-      <Name>CFXR.WelcomeScreen</Name>
-    </ProjectReference>
-    <ProjectReference Include="CFXRRuntime.csproj">
-      <Project>{21ef07c5-d900-9b96-d293-55785f005cf5}</Project>
-      <Name>CFXRRuntime</Name>
-    </ProjectReference>
     <ProjectReference Include="KinoBloom.Runtime.csproj">
       <Project>{cb9808cc-a83c-f338-27cb-54f6702cd3c8}</Project>
       <Name>KinoBloom.Runtime</Name>
@@ -964,6 +956,14 @@
     <ProjectReference Include="CFXRDemo.csproj">
       <Project>{c73a79cb-0eee-4d77-51e2-b45957a8c252}</Project>
       <Name>CFXRDemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXR.WelcomeScreen.csproj">
+      <Project>{758cd580-f564-b038-4310-712693b9dbe9}</Project>
+      <Name>CFXR.WelcomeScreen</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXRRuntime.csproj">
+      <Project>{21ef07c5-d900-9b96-d293-55785f005cf5}</Project>
+      <Name>CFXRRuntime</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
