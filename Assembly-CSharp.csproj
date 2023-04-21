@@ -67,6 +67,7 @@
      <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_New.cs" />
      <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_LightFlicker.cs" />
      <Compile Include="Assets/Scripts/PlayerModifier.cs" />
+     <Compile Include="Assets/Yandex/Plugins/Yandex.cs" />
      <Folder Include="Assets" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX3 Prefabs/Magic Dark" />
@@ -109,6 +110,7 @@
      <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX2 Prefabs" />
      <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/Materials/Fire" />
      <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX3 Prefabs/Light" />
+     <Folder Include="Assets/Yandex/Plugins" />
      <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX Prefabs/Explosions" />
      <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX Prefabs/Hits" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
@@ -169,6 +171,7 @@
      <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX3 Prefabs/Fire" />
      <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX3 Prefabs/Electric" />
      <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/Materials/Symbols" />
+     <Folder Include="Assets/Yandex" />
      <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Assets" />
      <Folder Include="Assets/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Sword Trails" />
      <Folder Include="Assets/Prefabs" />
