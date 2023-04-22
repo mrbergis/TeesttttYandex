@@ -31,8 +31,8 @@ public class PlayerModifier : MonoBehaviour
         
         Barrier.EventBarrier += InBarrier;
 
-        SetWidth(_progress.width);
-        SetHeight(_progress.height);
+        SetWidth(_progress.playerInfo.width);
+        SetHeight(_progress.playerInfo.height);
     }
 
     private void Update()
@@ -114,14 +114,14 @@ public class PlayerModifier : MonoBehaviour
     public void SetWidth(int value)
     {
         width = value;
-        _progress.width = value;
+        _progress.playerInfo.width = value;
         UpdateWidth();
     }
     
     public void SetHeight(int value)
     {
         height = value;
-        _progress.height = value;
+        _progress.playerInfo.height = value;
         UpdateHeight();
     }
     

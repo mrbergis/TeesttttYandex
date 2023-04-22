@@ -26,7 +26,7 @@ public class CoinManager : MonoBehaviour
     
     private void Start()
     {
-        numberOfCoins = Progress.Instance.coins;
+        numberOfCoins = Progress.Instance.playerInfo.coins;
         text.text = numberOfCoins.ToString();
 
         GameManager.GoToExit += SaveToProgress;
@@ -45,13 +45,13 @@ public class CoinManager : MonoBehaviour
 
     public void SaveToProgress()
     {
-        Progress.Instance.coins = numberOfCoins;
+        Progress.Instance.playerInfo.coins = numberOfCoins;
     }
 
     public void TakeCoins(int coin)
     {
         numberOfCoins -= coin;
-        Progress.Instance.coins = numberOfCoins;
+        Progress.Instance.playerInfo.coins = numberOfCoins;
         text.text = numberOfCoins.ToString();
     }
 }

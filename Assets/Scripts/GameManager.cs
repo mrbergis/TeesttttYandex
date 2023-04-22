@@ -33,6 +33,15 @@ public class GameManager : MonoBehaviour
 
     public void Play()
     {
+        
+        #if UNITY_WEBGL
+                Progress.Instance.Save();
+        #endif
+
+        #if UNITY_EDITOR
+                Debug.Log("Игра сохранена");
+        #endif
+        
         startMenu.SetActive(false);
         GoToPlay?.Invoke();
     }
@@ -48,6 +57,9 @@ public class GameManager : MonoBehaviour
         int index = SceneManager.GetActiveScene().buildIndex + 1;
         if (index < SceneManager.sceneCountInBuildSettings)
         {
+            Progress.Instance.playerInfo.level = index;
+            Progress.Instance.Save();
+            
             SceneManager.LoadScene(index);
         }
     }
