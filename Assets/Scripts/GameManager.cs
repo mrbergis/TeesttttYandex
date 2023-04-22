@@ -1,12 +1,16 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    [DllImport("__Internal")]
+    private static extern void ShowAdv();
+    
     public static GameManager Instance = null;
     public static event Action GoToPlay;
     public static event Action GoToExit;
@@ -28,6 +32,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        ShowAdv();
+        
         levelText.text = SceneManager.GetActiveScene().name;
     }
 
