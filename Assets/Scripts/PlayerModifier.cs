@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class PlayerModifier : MonoBehaviour
@@ -22,6 +23,9 @@ public class PlayerModifier : MonoBehaviour
     [SerializeField] private Transform colliderTransform;
 
     [SerializeField] private AudioSource audioSource;
+    
+    [DllImport("__Internal")]
+    private static extern void SetToLeaderboard(int value);
     
     private void Start()
     {
@@ -122,6 +126,9 @@ public class PlayerModifier : MonoBehaviour
     {
         height = value;
         _progress.playerInfo.height = value;
+        
+        SetToLeaderboard(value);
+        
         UpdateHeight();
     }
     

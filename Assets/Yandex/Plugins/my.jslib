@@ -37,4 +37,13 @@ mergeInto(LibraryManager.library, {
     });
   },
 
+  SetToLeaderboard : function(value){
+    ysdk.getLeaderboards()
+      .then(lb => {
+        // Без extraData
+        lb.setLeaderboardScore('Height', value);
+      });
+  },
+
+
 });
