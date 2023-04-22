@@ -33,17 +33,16 @@ public class GameManager : MonoBehaviour
 
     public void Play()
     {
-        
-        #if UNITY_WEBGL
-                Progress.Instance.Save();
-        #endif
-
         #if UNITY_EDITOR
                 Debug.Log("Игра сохранена");
         #endif
         
         startMenu.SetActive(false);
         GoToPlay?.Invoke();
+        
+#if UNITY_WEBGL
+        Progress.Instance.Save();
+#endif
     }
 
     public void ShowFinishWindow()

@@ -35,7 +35,11 @@ public class Progress : MonoBehaviour
             transform.parent = null;
             DontDestroyOnLoad(gameObject);
             Instance = this;
+            
+#if UNITY_WEBGL
             LoadExtern();
+#endif
+            
         }
         else
         {
@@ -46,7 +50,10 @@ public class Progress : MonoBehaviour
     public void Save()
     {
         string jsonString = JsonUtility.ToJson(playerInfo);
+#if UNITY_WEBGL
         SaveExtern(jsonString);
+#endif
+        
     }
 
     public void SetPlayerInfo(string value)

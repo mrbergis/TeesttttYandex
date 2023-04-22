@@ -69,6 +69,8 @@
      <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_LightFlicker.cs" />
      <Compile Include="Assets/Scripts/PlayerModifier.cs" />
      <Compile Include="Assets/Scripts/StartMenu.cs" />
+     <Compile Include="Assets/Scripts/Language.cs" />
+     <Compile Include="Assets/Scripts/InternationalText.cs" />
      <Folder Include="Assets" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX3 Prefabs/Magic Dark" />

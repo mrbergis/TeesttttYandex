@@ -127,7 +127,10 @@ public class PlayerModifier : MonoBehaviour
         height = value;
         _progress.playerInfo.height = value;
         
+#if UNITY_WEBGL
         SetToLeaderboard(value);
+#endif
+        
         
         UpdateHeight();
     }
