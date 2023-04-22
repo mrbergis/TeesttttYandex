@@ -87,4 +87,26 @@ mergeInto(LibraryManager.library, {
     })
   },
 
+  BuyCrown: function(){
+		payments.purchase({ id: 'crown' }).then(purchase => {
+        // Покупка успешно совершена!
+				myGameInstance.SendMessage("InApp", "SetCrownTrue");
+    }).catch(err => {
+        // Покупка не удалась: в консоли разработчика не добавлен товар с таким id,
+        // пользователь не авторизовался, передумал и закрыл окно оплаты,
+        // истекло отведённое на покупку время, не хватило денег и т. д.
+    })
+  },
+
+  CheckCrown: function(){
+  		var SHOW_ADS = true;
+  		payments.getPurchases().then(purchases => {
+          if (purchases.some(purchase => purchase.productID === 'crown')) {
+  	          myGameInstance.SendMessage("InApp", "SetCrownTrue");
+          }
+      }).catch(err => {
+          // Выбрасывает исключение USER_NOT_AUTHORIZED для неавторизованных пользователей.
+      })
+  },
+
 });

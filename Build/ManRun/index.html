@@ -30,6 +30,7 @@
           window.ysdk = ysdk;
           auth();
           initLeaderboard();
+          initPayments();
       });
 
       var lb;
@@ -37,6 +38,18 @@
       function initLeaderboard() {
         ysdk.getLeaderboards()
           .then(_lb => lb = _lb);
+      }
+
+      var payments = null;
+      function initPayments() {
+        ysdk.getPayments({ signed: true }).then(_payments => {
+            // Покупки доступны.
+            payments = _payments;
+          }).catch(err => {
+            // Покупки недоступны. Включите монетизацию в консоли разработчика.
+            // Убедитесь, что на вкладке Покупки консоли разработчика присутствует таблица
+            // хотя бы с одним внутриигровым товаром и надписью «Покупки разрешены».
+          })
       }
 
       var player;

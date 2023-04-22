@@ -56,7 +56,7 @@
      <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Scripts/CFX_AutoDestructShuriken.cs" />
      <Compile Include="Assets/Scripts/CoinLogic.cs" />
      <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_RotateCamera.cs" />
-     <Compile Include="Assets/Yandex/Plugins/Yandex.cs" />
+     <Compile Include="Assets/Scripts/Yandex.cs" />
      <Compile Include="Assets/Scripts/Barrier.cs" />
      <Compile Include="Assets/Scripts/Progress.cs" />
      <Compile Include="Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_RandomDirectionTranslate.cs" />
@@ -71,6 +71,8 @@
      <Compile Include="Assets/Scripts/StartMenu.cs" />
      <Compile Include="Assets/Scripts/Language.cs" />
      <Compile Include="Assets/Scripts/InternationalText.cs" />
+     <Compile Include="Assets/Scripts/InApp.cs" />
+     <Compile Include="Assets/Scripts/Crown.cs" />
      <Folder Include="Assets" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <Folder Include="Assets/JMO Assets/Cartoon FX (legacy)/CFX3 Prefabs/Magic Dark" />
